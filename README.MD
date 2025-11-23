@@ -21,8 +21,7 @@ This Streamlit app is an AI-powered travel agent that generates personalized tra
 git clone https://github.com/aneesahmad206/travel_agent.git
 cd awesome-llm-apps/ai_agent_tutorials/ai_travel_agent
 2. Install the required dependencies
-bash
-Copy code
+```bash
 pip install -r requirements.txt
 3. Set up API keys
 Watsonx API
@@ -32,22 +31,18 @@ Obtain your API key and project ID
 
 Use environment variables to store them securely:
 
-bash
-Copy code
 export WATSONX_API_KEY="your_watsonx_api_key"
 export WATSONX_PROJECT_ID="your_project_id"
 export WATSONX_URL="https://us-south.ml.cloud.ibm.com"
 SerpAPI Key
 Sign up for a SerpAPI account and obtain your API key
 
-bash
-Copy code
+
 export SERPAPI_KEY="your_serpapi_key"
 ⚠️ Do not hardcode your API keys in the code. Use environment variables for security.
 
 4. Run the Streamlit App
-bash
-Copy code
+
 streamlit run local_travel_agent.py
 The local_travel_agent.py file supports both Watsonx cloud and local LLM setups.
 
