@@ -140,8 +140,7 @@ Ensure API keys are configured using environment variables.
 travel_agent/
 ├── local_travel_agent.py
 ├── requirements.txt
-├── tools/
-│   └── calendar_tool.py
+
 └── README.md
 ```
 
