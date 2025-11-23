@@ -1,80 +1,164 @@
 # 🛫 AI Travel Agent (Watsonx Edition)
 
-This Streamlit app is an AI-powered travel agent that generates personalized travel itineraries using **IBM Watsonx**. It automates the process of researching, planning, and organizing your dream vacation, allowing you to explore exciting destinations with ease.
+An AI-powered travel assistant built using **IBM Watsonx** and **Streamlit**. This application automates researching destinations, planning activities, and organizing your trip into a downloadable calendar format.
 
 ---
 
-## Features
+## 🌟 Features
 
-- Research and discover exciting travel destinations, activities, and accommodations  
-- Customize your itinerary based on the number of days you want to travel  
-- Utilize the power of **Watsonx** to generate intelligent and personalized travel plans  
-- Download your itinerary as a calendar (.ics) file to import into Google Calendar, Apple Calendar, or other calendar apps  
+✅ Discover exciting travel destinations, activities, and accommodations
+✅ Personalized itineraries based on destination and trip duration
+✅ Powered by **IBM Watsonx** for intelligent itinerary generation
+✅ Download your plan as a **Calendar (.ics)** file
+✅ Import into Google, Apple, or Outlook calendar
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
-### 1. Clone the GitHub repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/aneesahmad206/travel_agent.git
-cd awesome-llm-apps/ai_agent_tutorials/ai_travel_agent
-### 2. Install the required dependencies
+cd travel_agent
+```
+
+---
+
+### 2. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
-3. Set up API keys
-Watsonx API
-Sign up for an IBM Watsonx account
+```
 
-Obtain your API key and project ID
+---
 
-Use environment variables to store them securely:
+### 3. Set Up API Keys
 
+This project requires:
+
+* IBM Watsonx API key
+* IBM Watsonx Project ID
+* SerpAPI key (for web research)
+
+Set them as environment variables:
+
+```bash
 export WATSONX_API_KEY="your_watsonx_api_key"
 export WATSONX_PROJECT_ID="your_project_id"
 export WATSONX_URL="https://us-south.ml.cloud.ibm.com"
-SerpAPI Key
-Sign up for a SerpAPI account and obtain your API key
-
 
 export SERPAPI_KEY="your_serpapi_key"
-⚠️ Do not hardcode your API keys in the code. Use environment variables for security.
+```
 
-4. Run the Streamlit App
+⚠️ **Do NOT hardcode API keys** in the code or commit them to GitHub.
 
+---
+
+### 4. Run the Streamlit App
+
+```bash
 streamlit run local_travel_agent.py
-The local_travel_agent.py file supports both Watsonx cloud and local LLM setups.
+```
 
-How It Works
-The AI Travel Agent has two main components:
+This file supports both:
 
-Researcher Agent
-Generates search terms based on the user's destination and travel duration
+* ✅ Watsonx Cloud
+* ✅ Local LLM setups
 
-Searches the web for relevant activities and accommodations using SerpAPI
+---
 
-Planner Agent
-Takes research results and user preferences
+## 🧠 How It Works
 
-Generates a personalized draft itinerary including suggested activities, dining options, and accommodations
+The AI Travel Agent includes two intelligent components:
 
-Using the Calendar Download Feature
-After generating your travel itinerary:
+### 🔍 Researcher Agent
 
-Click the Download Itinerary as Calendar (.ics) button next to Generate Itinerary
+* Generates search queries based on destination and duration
+* Searches the web using SerpAPI
+* Collects activities, landmarks, and accommodations
 
-Save the .ics file to your computer
+### 🗓️ Planner Agent
 
-Import it into your preferred calendar application (Google Calendar, Apple Calendar, Outlook, etc.)
+* Uses research results and user preferences
+* Produces a structured daily travel itinerary
+* Suggests activities, dining, and lodging
 
-Each day of your itinerary appears as an all-day event in your calendar
+---
 
-Complete details for each day's activities are included in the event description
+## 📅 Calendar Download Feature
 
-This feature makes it easy to keep track of your travel plans and access your itinerary across all devices, even offline.
+After generating your itinerary:
 
-Local vs Cloud Version
-local_travel_agent.py: Runs Watsonx locally or with cloud access (requires IBM Watsonx API key and project ID)
+1. Click **Download Itinerary as Calendar (.ics)**
+2. Save the file
+3. Import into:
 
-Cloud deployment: Use environment variables to keep your API keys secure while deploying on Streamlit Cloud or other hosting platforms
+   * Google Calendar
+   * Apple Calendar
+   * Outlook
+   * Any calendar app
+
+Each day appears as an **all‑day event**, including:
+
+* Activity details
+* Locations
+* Notes and recommendations
+
+This allows you to:
+✅ Access plans offline
+✅ View on mobile devices
+✅ Stay organized while traveling
+
+---
+
+## 🌐 Local vs Cloud
+
+| Mode                    | Description                            |
+| ----------------------- | -------------------------------------- |
+| `local_travel_agent.py` | Runs locally or with Watsonx Cloud     |
+| Cloud Deployment        | Use environment variables for security |
+
+---
+
+## 🛠️ Deployment
+
+You can deploy this app on:
+
+* Streamlit Cloud
+* IBM Cloud
+* Hugging Face Spaces
+* Render
+
+Ensure API keys are configured using environment variables.
+
+---
+
+## 📂 Project Structure
+
+```
+travel_agent/
+├── local_travel_agent.py
+├── requirements.txt
+├── tools/
+│   └── calendar_tool.py
+└── README.md
+```
+
+---
+
+## 📝 License
+
+MIT License
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! Feel free to submit improvements or new features.
+
+---
+
+## ⭐ Support
+
+If you like this project, please ⭐ the repository!
