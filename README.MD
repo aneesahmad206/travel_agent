@@ -127,8 +127,6 @@ You can deploy this app on:
 
 * Streamlit Cloud
 * IBM Cloud
-* Hugging Face Spaces
-* Render
 
 Ensure API keys are configured using environment variables.
 
@@ -140,17 +138,11 @@ Ensure API keys are configured using environment variables.
 travel_agent/
 ├── local_travel_agent.py
 ├── requirements.txt
-
 └── README.md
 ```
 
 ---
 
-## 📝 License
-
-MIT License
-
----
 
 ## 🤝 Contributing
 
